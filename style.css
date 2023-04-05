@@ -1,0 +1,151 @@
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+    font-style: italic;
+}
+
+.container {
+    margin: auto;
+    width: 70vw;
+    border: 3px solid #83c3d8;
+    border-radius: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: #88cae0;
+    box-shadow: #649fb3 5px 5px 0px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+input {
+    padding: 10px;
+    margin-right: 10px;
+    width: 70%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-style: italic;
+    outline: none;
+}
+
+input:hover {
+    box-shadow: #6b8a94 3px 3px 0px;
+}
+
+#createBtn {
+    padding: 10px;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-style: italic;
+}
+
+#createBtn:hover {
+    box-shadow: #10627e 3px 3px 0px;
+    background-color: #147da0;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+}
+
+li.completed {
+    background-color: #8F8;
+    color: #fff;
+}
+
+li button.edit {
+    font-style: italic;
+    background-color: #008CBA;
+}
+
+li  button.edit:hover {
+    background-color: #296377;
+}
+
+li button {
+    font-style: italic;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+
+li button:hover {
+    background-color: #d32f2f;
+}
+
+li span {
+    flex: 1;
+    margin-right: 10px;
+}
+
+li button.check {
+    font-style: italic;
+    background-color: #4CAF50;
+}
+
+li button.check:hover {
+    background-color: #357a38;
+}
+
+
+.btn-clear {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clear {
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    background: #88cae0;
+    color: #fff;
+    font-size: 20px;
+    border-color: #008CBA;
+    cursor: pointer;
+    font-style: italic;
+    transition: transform 0.3s linear;
+}
+
+.clear:hover {
+    box-shadow: #005f80 2px 2px 0px;
+    background:#278faf;
+}
+
+.clear:active {
+    transform: scale(0.8);
+}
