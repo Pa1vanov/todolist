@@ -1,11 +1,11 @@
-const todoList = document.getElementById('todoList');
 const todoInput = document.getElementById('todoInput');
+const todoList = document.getElementById('todoList');
 const createBtn = document.getElementById('createBtn');
 const clearBtn = document.querySelector('.clear');
+const emptyTop = document.querySelector('.empty');
 // console.log(clearBtn);
 
 let todos = JSON.parse(localStorage.getItem('todos')) || [];
-
 
 // renderTodos
 function renderTodos() {
@@ -19,7 +19,7 @@ function renderTodos() {
         <button class="edit">Edit</button>
         <button class="delete">Delete</button>
       `;
-        if (todo.completed) {
+        if(todo.completed){
             li.classList.add('completed');
         }
         // checkBtn
@@ -27,7 +27,6 @@ function renderTodos() {
         checkBtn.addEventListener('click', () => {
             todo.completed = !todo.completed;
             localStorage.setItem('todos', JSON.stringify(todos));
-            
             renderTodos();
         });
         // deleteBtn
@@ -48,7 +47,7 @@ function renderTodos() {
             }
         });
         // clearBtn
-        clearBtn.addEventListener('click', () => {  
+        clearBtn.addEventListener('click', () => {
             todos.splice(i, 1);
             localStorage.setItem('todos', JSON.stringify(todos));
             renderTodos();
@@ -65,17 +64,16 @@ function createInput() {
         if (task) {
             todos.push({ task, completed: false }); // bunda completed ni false qilish kerak bolmasam li elemntiga push bolganida completed bolib qolardi!
             localStorage.setItem('todos', JSON.stringify(todos));
+            emptyTop.style.display = 'none';
             todoInput.value = '';
             renderTodos();
         }
          else if(todoInput.value.length == 0) {
-            alert('Please Enter Valid Value!');
+            emptyTop.style.display = 'grid';
+            renderTodos();
         }
     });
 }
 
 createInput();
 renderTodos();
-
-
-
